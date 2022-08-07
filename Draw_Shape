@@ -1,0 +1,229 @@
+\\ Draw a filled triangle
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the Triangle: \n")
+        if tmp.isdigit():
+            n = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, n
+
+
+def Triangle():
+    chars, n = get_data()
+    k = n - 1
+    for i in range(n):
+        for j in range(k):
+            print(end = ' ')
+        k = k -1
+        for j in range(i+1):
+            print(chars, end=' ')
+        print("\n")    
+
+if __name__ == '__main__':
+    Triangle()
+-----------------------------------------------------------------------------------
+\\Draw an empty triangle
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the Triangle: \n")
+        if tmp.isdigit():
+            n = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, n
+
+
+def Empty_Triangle():
+    chars, n = get_data()
+    k = 2
+    for i in range(1,n+1):
+        for j in range(1,2*n):
+            if i + j == n+1 or j - i == n-1:
+                print(chars, end='')
+            elif i == n and j != k:
+                print(chars, end='')
+                k = k+2
+            else:
+                print(end=' ')
+        print("\n")        
+
+if __name__ == '__main__':
+    Empty_Triangle()
+
+----------------------------------------------------------------------
+
+\\Draw a filled Square
+
+def get_len():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the square: \n")
+        if tmp.isdigit():
+            length = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, length
+
+
+def draw_square():
+    c, l = get_len()
+    for i in range(l):
+        for j in range(l):
+            print(c, end=" ")
+        print("")
+
+
+if __name__ == '__main__':
+   draw_square()
+---------------------------------------------------------------
+\\Draw an empty Square
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the square: \n")
+        if tmp.isdigit():
+            length = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, length
+
+
+def draw_square():
+    c, l = get_data()
+    for j in range(0,l):
+        if j == 0 or j == l - 1:
+            print((c+ " ")*l,end=" ")
+        else:
+            print(c+" ", "  "*(l-3), c, end=" ")
+        print("")
+
+
+if __name__ == '__main__':
+   draw_square()
+--------------------------------------------------------------
+\\Draw a filled Rectangle
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+      rows=int(input("please enter the rows count: \n"))
+      columns=int(input("please enter the columns count: \n"))
+      if rows != columns:
+        print(f"the rows count is {rows} and the columns count is {columns}: \n")
+        break
+      else:
+        print("you should not  enter not equal values")
+    return rows,columns,chars
+
+
+
+def rectangle():
+   rows,columns,chars = get_data()
+   print("Rectangle Star Pattern")
+   for i in range(rows):
+       for j in range(columns):
+           print('*', end='  ')
+       print()
+
+
+if __name__ == '__main__':
+  rectangle()
+--------------------------------------------------------------------------------
+\\Draw an empty Rectangle
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+      rows=int(input("please enter the rows count: \n"))
+      columns=int(input("please enter the columns count: \n"))
+      if rows != columns:
+        print(f"the rows count is {rows} and the columns count is {columns}: \n")
+        break
+      else:
+        print("you should not  enter not equal values")
+    return rows,columns,chars
+
+
+
+def rectangle():
+    columns, rows, chars = get_data()
+    for j in range(0,rows):
+        if j == 0 or j == rows - 1:
+            print((chars+ " ")*rows,end=" ")
+        else:
+            print(chars+" ", "  "*(rows-3), chars, end=" ")
+        print("")
+
+
+if __name__ == '__main__':
+  rectangle()
+---------------------------------------------------------------------------------------
+
+\\Draw a filled Rhombus
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the Rhombus: \n")
+        if tmp.isdigit():
+            n = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, n
+
+
+def Rhombus():
+    chars, n = get_data()
+    for i in range(n):
+        print(" "*(n-i)+" *"*(i+1))
+    for j in range(n):
+        print(" "*(j+2)+" *"*(n-1-j))
+  
+if __name__ == '__main__':
+    Rhombus()
+-------------------------------------------------------------------------------------
+\\Draw an empty Rhombus
+
+def get_data():
+    chars = input("please insert the chars: \n")
+    while True:
+        tmp = input("please insert the length of the Rhombus: \n")
+        if tmp.isdigit():
+            n = int(tmp)
+            break
+        else:
+            print("only accept integer numbers")
+    return chars, n
+
+
+def Empty_Rhombus():
+    chars, n = get_data()
+    for i in range(1,n):
+        for j in range(1,2*n):
+            if i + j == n+1 or j - i == n-1:
+                print(chars, end='')
+            else:
+                print(end=' ')    
+        print("\n")
+        
+    for i in range(1,n+1):
+        for j in range(1,2*n):
+            if i==j or i+j == 2*n:
+                print(chars, end='')
+            else:
+                print(end=' ')    
+        print("\n")
+        
+if __name__ == '__main__':
+    Empty_Rhombus()
+
